@@ -8,5 +8,11 @@ const produtos = [
 console.log(produtos.filter(function(p) {
     //logica que retorna true or false, se for true ele entra no aray final
     // array final deve ser igual ou menor 
-    return true
+    return p.preco > 2500
 }))
+
+
+const caro = produto => produto.preco >= 500
+const fragil = produto => produto.fragil  
+
+console.log(produtos.filter(caro).filter(fragil))
